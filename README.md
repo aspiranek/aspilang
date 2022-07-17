@@ -1,8 +1,8 @@
 # aspilang
-## Moja strona: adam.szczecin.pl
+## Moja strona: [adam.szczecin.pl](https://adam.szczecin.pl)
 
 AspiLang to prosty język interpretowalny.  
 Użycie: aspi [nazwa pliku]
 
 ##
-## [Download](https://github.com/aspiranek/aspilang/releases)
+## [POBIERZ](https://github.com/aspiranek/aspilang/releases)
