@@ -1,0 +1,36 @@
+; Program wypisujący n pierwszych liczb ciągu Fibonacciego
+; Autor: Adam Szymaszkiewicz
+; Język: AspiLang
+
+utworz zmienna a
+utworz zmienna b
+utworz zmienna c
+utworz zmienna d
+
+; wczytanie danych
+wypisz napis "Ile liczb ciągu Fibonacciego mam wypisać? "
+wczytaj do c
+
+; przygotowanie zmiennych
+ustaw a na 1
+ustaw b na 1
+
+; pierwsza liczba ciągu
+wypisz zmienna a
+nowa linia
+zmniejsz c o 1
+
+; dopóki c > 0
+:petla
+jezeli c > 0 to / inaczej -
+	; wypisz kolejna liczbe ciagu
+	wypisz zmienna b
+	nowa linia
+
+	; następna liczba ciągu
+	ustaw d na a
+	ustaw a na b
+	zwieksz b o d
+
+	zmniejsz c o 1
+skocz do petla

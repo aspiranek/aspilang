@@ -1,0 +1,55 @@
+; Program wypisujący ciąg Collatza zaczynając od podanej liczby
+; Autor: Adam Szymaszkiewicz
+; Język: AspiLang
+
+utworz zmienna a
+utworz zmienna b
+utworz zmienna c
+utworz zmienna d
+
+wypisz napis "Od jakiej liczby mam zacząć? "
+wczytaj do a
+
+wypisz zmienna a
+wypisz napis " "
+
+:petla
+jezeli a > 1 to / inaczej koniec
+
+	; parzystosc (b = 0, jezeli a parzyste; b = 1, jezeli a nieparzyste)
+	ustaw b na a
+	:parzystosc
+	jezeli b > 1 to / inaczej efekt
+		zmniejsz b o 2
+	skocz do parzystosc
+
+	:efekt
+	ustaw c na 0
+	; parzyste
+	jezeli b == 0 to / inaczej nieparzyste
+		ustaw b na a
+		:odejmowanie
+		jezeli b > 1 to / inaczej ustaw
+			zmniejsz b o 2
+			zwieksz c o 1
+		skocz do odejmowanie
+		:ustaw
+		ustaw a na c
+	skocz do wypisz
+
+	; nieparzyste
+	:nieparzyste
+	jezeli b == 1 to / inaczej wypisz
+		ustaw b na a
+		zwieksz a o b
+		zwieksz a o b
+		zwieksz a o 1
+
+	:wypisz
+	wypisz zmienna a
+	wypisz napis " "
+	
+skocz do petla
+
+:koniec
+nowa linia

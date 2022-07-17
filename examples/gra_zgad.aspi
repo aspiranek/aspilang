@@ -1,0 +1,61 @@
+;-------------------------------------------;
+; Dwuosobowa gra w zgadywanie liczby        ;
+; Autor: Adam Szymaszkiewicz                ;
+; Język: AspiLang                           ;
+;-------------------------------------------;
+
+utworz zmienna licz
+utworz zmienna odp
+utworz zmienna proby
+
+czysc
+wypisz napis "GRACZ 1"
+nowa linia
+
+:wybierz
+jezeli licz < 1 to wybieram inaczej /
+jezeli licz > 100 to wybieram inaczej juz_wybrana
+:wybieram
+wypisz napis "Wybierz liczbę z zakresu od 1 do 100: "
+wczytaj do licz
+skocz do wybierz
+
+:juz_wybrana
+
+czysc
+wypisz napis "GRACZ 2"
+nowa linia
+
+wypisz napis "Zgaduj zgadula!"
+nowa linia
+:zgadywanie
+zwieksz proby o 1
+wypisz napis "Próba #"
+wypisz zmienna proby
+wypisz napis ": Jaką liczbę z zakresu od 1 do 100 wybrał GRACZ 1? "
+wczytaj do odp
+jezeli odp == licz to / inaczej mniejsze_wieksze
+skocz do zgadnieto
+:mniejsze_wieksze
+jezeli odp < licz to / inaczej wieksze
+wypisz napis "Za mało!"
+nowa linia
+skocz do zgadywanie
+:wieksze
+wypisz napis "Za dużo!"
+nowa linia
+skocz do zgadywanie
+
+:zgadnieto
+wypisz napis "Brawo! Zgadłeś liczbę po "
+wypisz zmienna proby
+jezeli proby == 1 to / inaczej probach
+wypisz napis " próbie"
+skocz do juz_wypisz
+:probach
+wypisz napis " próbach"
+:juz_wypisz
+wypisz napis "! To faktycznie było "
+wypisz zmienna licz
+wypisz napis "!"
+nowa linia
